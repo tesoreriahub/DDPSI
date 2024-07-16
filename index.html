@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensa Digital Personal en Seguridad de la Información (DDPSI) - Introducción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-image">
+    <div class="container">
+        <h1>Defensa Digital Personal en Seguridad de la Información (DDPSI)</h1>
+        <div class="intro-content">
+            <h2>Bienvenido(a) a DDPSI</h2>
+            <h3>Objetivo</h3>
+            <p>Esta aplicación web sirve como una herramienta de diagnóstico y autoevaluación personalizada para evaluar aspectos clave sobre la seguridad de la información de un individuo. Al examinar el manejo de aspectos tales como Redes Sociales, Navegación Web, Dispositivos Móviles entre otros, proporciona a los usuarios una representación visual de su seguridad personal, destacando áreas de posible mejora.</p>
+            
+            <h3>Créditos</h3>
+            <p>Desarrollado por Julián Uribe - julian.uribe@medellin.gov.co</p>
+            <p>Supervisado por Jorge Iván Brand Ortíz - Subsecretaria de Tesoreria - Secretaria de Hacienda</p>
+            
+            <h3>Ingrese al diagnóstico</h3>
+            <form id="nameForm">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                <button type="submit" class="start-button">Comenzar</button>
+            </form>
+
+            <h3>Referencias</h3>
+            <div class="references">
+                <p>Chaudhary, S. (2024). Driving Behaviour Change with Cybersecurity Awareness. Computers & Security, 103858. https://doi.org/10.1016/j.cose.2024.103858</p>
+                <p>Prümmer, J., Van Steen, T., & Van Den Berg, B. (2024). A systematic review of current cybersecurity training methods. Computers & Security, 136, 103585. https://doi.org/10.1016/j.cose.2023.103585</p>
+                <p>Baltuttis, D., Teubner, T., & Adam, M. T. (2024). A Typology of Cybersecurity Behavior among Knowledge Workers. Computers & Security, 140, 103741. https://doi.org/10.1016/j.cose.2024.103741</p>
+                <p>Lubis, M., Safitra, M. F., Fakhrurroja, H., & Putri, D. P. (2024). Navigating Online Privacy: Insights from Cybersecurity Expert. Procedia Computer Science, 234, 1388–1395. https://doi.org/10.1016/j.procs.2024.03.137</p>
+                <p>Ebert, N., Schaltegger, T., Ambuehl, B., Schöni, L., Zimmermann, V., & Knieps, M. (2023). Learning from safety science: A way forward for studying cybersecurity incidents in organizations. Computers & Security, 134, 103435. https://doi.org/10.1016/j.cose.2023.103435</p>
+                <p>Rizal, M. A., & Setiawan, B. (2024). Information Security Awareness Literature Review: Focus Area for measurement Instruments. Procedia Computer Science, 234, 1420–1427. https://doi.org/10.1016/j.procs.2024.03.141</p>
+                <p>Angafor, G., Yevseyeva, I., & Maglaras, L. (2024). MalAware: A tabletop exercise for malware security awareness education and incident response training. Internet of Things and Cyber-physical Systems. https://doi.org/10.1016/j.iotcps.2024.02.003</p>
+            </div>
+            <!-- <a href="index.html" class="start-button">Comenzar</a> -->
+        </div>
+    </div>
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            window.location.href = `survey.html?firstName=${encodeURIComponent(firstName)}&lastName=${encodeURIComponent(lastName)}`;
+        });
+    </script>
+</body>
+</html>

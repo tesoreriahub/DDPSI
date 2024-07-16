@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensa Digital Personal en Seguridad de la Información (DDPSI)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-image">
+    <div class="container">
+        <h1>Defensa Digital Personal en Seguridad de la Información (DDPSI)</h1>
+        <h2 id="userName"></h2>
+        <form id="surveyForm">
+            <div id="questions"></div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="results" style="display: none;">
+            <!-- <h2>Resultados Diagnóstico</h2> -->
+            <div class="chart-container">
+                <canvas id="radarChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div id="recommendationsSection"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
